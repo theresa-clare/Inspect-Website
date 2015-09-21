@@ -1,1 +1,4 @@
-if (url) { console.log(url); }
+if (url) {
+	var iframe = document.getElementById("iframe");
+	iframe.src = url;
+}
