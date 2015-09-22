@@ -25,8 +25,9 @@ def homepage(url=None):
 
 		# source_code_transformed = transform_html(source_code)
 		tags_and_count = get_tags_and_count(source_code)
-		print tags_and_count
-		return render_template('homepage.html', url=url, msg=msg, source_code=source_code)
+
+		return render_template('homepage.html', url=url, msg=msg, \
+			source_code=source_code, tags_and_count=tags_and_count)
 
 	else:
 		return render_template('homepage.html')

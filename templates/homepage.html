@@ -18,6 +18,14 @@
 	<p>{{ msg }}<p>
 
 	<div>
+		<ul>
+		{% for tag, count in tags_and_count.iteritems() %}
+			<li>{{ tag }}, {{ count }}</li>
+		{% endfor %}
+		</ul>
+	</div>
+
+	<div>
 		<pre><code id="source_code">{{ source_code }}</code></pre>
 	</div>
 
