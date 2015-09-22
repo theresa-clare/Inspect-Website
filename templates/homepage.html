@@ -20,7 +20,7 @@
 	<div>
 		<ul>
 		{% for tag, count in tags_and_count.iteritems() %}
-			<li>{{ tag }}, {{ count }}</li>
+			<li class="{{ tag }}-tag">{{ tag }}, {{ count }}</li>
 		{% endfor %}
 		</ul>
 	</div>
@@ -33,7 +33,7 @@
 		<iframe id="iframe" src=""></iframe>
 	<div>
 
-	<script id="my_string">
+	<script>
 	var url = "{{ url }}";
 	</script>
 	<script src="/static/script.js"></script>

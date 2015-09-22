@@ -8,7 +8,7 @@ app.secret_key = "iLoveSlack"
 
 
 @app.route('/', methods=['GET', 'POST'])
-def homepage(url=None):
+def homepage():
 	if request.method == 'POST':
 		url = request.form['url']
 
@@ -30,7 +30,7 @@ def homepage(url=None):
 			source_code=source_code, tags_and_count=tags_and_count)
 
 	else:
-		return render_template('homepage.html')
+		return render_template('homepage.html', tags_and_count={})
 
 
 # def transform_html(source_code):
