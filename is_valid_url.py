@@ -17,15 +17,16 @@ def is_valid_url(url):
 	False
 	"""
 	if url is None:
-		return None
+		return None, None
 
 	try:
 		response = requests.get(url)
 		if response.status_code == requests.codes.ok:
-			return True
-		return False
+			response_html = response.text
+			return True, response_html
+		return False, None
 	except requests.exceptions.ConnectionError:
-		return False
+		return False, None
 
 #################################################################################
 

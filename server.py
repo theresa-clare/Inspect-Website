@@ -14,11 +14,13 @@ def homepage(url=None):
 			url = "http://" + url
 			msg = ""
 
-		if not is_valid_url(url):
+		is_valid, source_code = is_valid_url(url)
+		if not is_valid:
 			url = ""
 			msg = "Please enter a valid URL"
+			source_code = ""
 
-		return render_template('homepage.html', url=url, msg=msg)
+		return render_template('homepage.html', url=url, msg=msg, source_code=source_code)
 
 	else:
 		return render_template('homepage.html')
