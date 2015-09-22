@@ -23,7 +23,6 @@ def homepage():
 			msg = "Please enter a valid URL"
 			source_code = ""
 
-		# source_code_transformed = transform_html(source_code)
 		tags_and_count = get_tags_and_count(source_code)
 
 		return render_template('homepage.html', url=url, msg=msg, \
@@ -32,11 +31,6 @@ def homepage():
 	else:
 		return render_template('homepage.html', tags_and_count={})
 
-
-# def transform_html(source_code):
-# 	res = re.sub(r'<(/?)(\S+)(.*?)>', r'<div class="\2">&lt;\1\2\3&gt;</div>', source_code)
-# 	res = res.replace('\n', " ")
-# 	return res.replace("'" , '"')
 
 
 if __name__ == "__main__":
