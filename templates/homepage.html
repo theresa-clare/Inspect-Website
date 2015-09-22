@@ -3,6 +3,7 @@
 <head>
 	<title>Theresa Cay's Slack Challenge</title>
 	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
 	<h1>Hello, world!</h1>
@@ -17,14 +18,16 @@
 	<p>{{ msg }}<p>
 
 	<div>
-		<pre><code>{{ source_code }}</code></pre>
+		<pre><code id="source_code">{{ source_code }}</code></pre>
 	</div>
 
 	<div>
 		<iframe id="iframe" src=""></iframe>
 	<div>
 
-	<script>var url = "{{ url }}";</script>
+	<script id="my_string">
+	var url = "{{ url }}";
+	</script>
 	<script src="/static/script.js"></script>
 </body>
 </html>

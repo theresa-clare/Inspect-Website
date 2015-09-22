@@ -2,3 +2,7 @@ iframe {
 	width: 80%;
 	height: 500px;
 }
+
+pre {
+	white-space: pre-wrap;
+}
