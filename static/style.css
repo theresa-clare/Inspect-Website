@@ -6,3 +6,7 @@ iframe {
 pre {
 	white-space: pre-wrap;
 }
+
+.highlight {
+	color: red;
+}
