@@ -13,17 +13,31 @@ if (url) {
 
 	var previousClassName = null;
 
-	// toggles highlight class for tags with the same class name on click events
-	$('li').click(function(){
-		var className = '.' + this.className;
+	$('li').on({
+		// adds or removes bold text for hover events
+		mouseover: function(){
+			$(this).addClass('hover');
+		},
+		mouseout: function(){
+			$(this).removeClass('hover');
+		},
+		// toggles highlight class for tags with the same class name on click events
+		click: function(){
+			$(this).removeClass('hover');
 
-		if (className !== previousClassName) {
-			$('#source_code').find(previousClassName).removeClass('highlight');
+			var className = '.' + this.className;
+
+			if (className !== previousClassName) {
+				$('#source_code').find(previousClassName).removeClass('highlight');
+			}
+
+			$('#source_code').find(className).toggleClass('highlight');
+			previousClassName = className;
+
+			$(this).addClass('hover');
 		}
 
-		$('#source_code').find(className).toggleClass('highlight');
-		previousClassName = className;
-	});
+	})
 } else {
 	$('#main-wrapper').hide();
 }
