@@ -36,8 +36,7 @@ if (url) {
 
 			$(this).addClass('hover');
 		}
-
-	})
+	});
 } else {
 	$('#main-wrapper').hide();
 }

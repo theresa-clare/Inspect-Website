@@ -27,7 +27,6 @@ def homepage():
 
 		return render_template('homepage.html', url=url, msg=msg, \
 			source_code=source_code, tags_and_count=tags_and_count)
-
 	else:
 		return render_template('homepage.html', tags_and_count={})
 
