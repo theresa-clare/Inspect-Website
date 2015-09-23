@@ -22,6 +22,6 @@ if (url) {
 		previousClassName = className;
 	});
 } else {
-	$('#iframe').hide();
+	$('#main-wrapper').hide();
 }
 

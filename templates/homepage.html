@@ -3,6 +3,7 @@
 <head>
 	<title>Theresa Cay's Slack Challenge</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/static/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -13,7 +14,7 @@
 
 		<form action="/" method="POST">
 			<label>Please type in a URL to preview<br>
-				<input type="text" name="url" placeholder="http://www.theresacay.com" required>
+				<input type="text" name="url" id="url-text" placeholder="http://www.theresacay.com" required>
 			</label><br>
 
 			<input type="submit">
@@ -22,27 +23,28 @@
 		<p>{{ msg }}<p>
 	</div>
 
-	<div id="middle" class="container">
-		<div class="row">
-			<div id="summary" class="col-lg-2">
-				{% if tags_and_count %}
-					<ul>
-					{% for tag, count in tags_and_count.iteritems() %}
-						<li class="{{ tag }}-tag">{{ tag }}, {{ count }}</li>
-					{% endfor %}
-					</ul>
-				{% endif %}
-			</div>
+	<div id="main-wrapper" class="container-fluid">
+		<div id="middle" class="container-fluid">
 
-			<div id="code" class="col-lg-10">
-				<pre><code id="source_code">{{ source_code }}</code></pre>
+			<div class="row">
+				<div id="summary" class="col-lg-2">
+					{% if tags_and_count %}
+						<ul>
+						{% for tag, count in tags_and_count.iteritems() %}
+							<li class="{{ tag }}-tag">{{ tag }}, {{ count }}</li>
+						{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+
+				<div id="code" class="col-lg-10">
+					<pre><code id="source_code">{{ source_code }}</code></pre>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="container-fluid">
 		<iframe id="iframe" src=""></iframe>
-	<div>
+	</div>
 
 	<script>
 	var url = "{{ url }}";
