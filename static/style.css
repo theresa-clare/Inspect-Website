@@ -1,6 +1,37 @@
-iframe {
-	width: 80%;
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+#title-form-msg {
+	background-color: pink;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+#middle {
+	margin: 20px auto;
+}
+
+#summary {
+	float: left;
+}
+
+#code {
+	float: right;
+	overflow: scroll;
 	height: 500px;
+}
+
+iframe {
+	width: 90%;
+	height: 500px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px; 
 }
 
 pre {

@@ -21,5 +21,7 @@ if (url) {
 		$('#source_code').find(className).toggleClass('highlight');
 		previousClassName = className;
 	});
+} else {
+	$('#iframe').hide();
 }
 

@@ -2,34 +2,45 @@
 <html>
 <head>
 	<title>Theresa Cay's Slack Challenge</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/static/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Hello, world!</h1>
+	<div id="title-form-msg" class="container-fluid">
+		<h1>Inspect a Website</h1>
 
-	<form action="/" method="POST">
-		<label>Please type in a URL to preview
-			<input type="text" name="url" placeholder="http://www.theresacay.com" required>
-		</label>
+		<form action="/" method="POST">
+			<label>Please type in a URL to preview<br>
+				<input type="text" name="url" placeholder="http://www.theresacay.com" required>
+			</label><br>
 
-		<input type="submit">
-	</form>
-	<p>{{ msg }}<p>
+			<input type="submit">
+		</form>
 
-	<div>
-		<ul>
-		{% for tag, count in tags_and_count.iteritems() %}
-			<li class="{{ tag }}-tag">{{ tag }}, {{ count }}</li>
-		{% endfor %}
-		</ul>
+		<p>{{ msg }}<p>
 	</div>
 
-	<div>
-		<pre><code id="source_code">{{ source_code }}</code></pre>
+	<div id="middle" class="container">
+		<div class="row">
+			<div id="summary" class="col-lg-2">
+				{% if tags_and_count %}
+					<ul>
+					{% for tag, count in tags_and_count.iteritems() %}
+						<li class="{{ tag }}-tag">{{ tag }}, {{ count }}</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+
+			<div id="code" class="col-lg-10">
+				<pre><code id="source_code">{{ source_code }}</code></pre>
+			</div>
+		</div>
 	</div>
 
-	<div>
+	<div class="container-fluid">
 		<iframe id="iframe" src=""></iframe>
 	<div>
 
