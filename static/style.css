@@ -40,7 +40,6 @@ input {
 #title-form-msg {
 	text-align: center;
 	color: white;
-	margin: 40px;
 }
 
 #url-text {
@@ -82,4 +81,12 @@ pre {
 
 .highlight {
 	color: red;
+}
+
+.vertical-center {
+	min-height: 100%;
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
 }

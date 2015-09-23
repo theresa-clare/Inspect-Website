@@ -9,18 +9,20 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="title-form-msg" class="container-fluid">
-		<h1>Inspect a Website</h1>
+	<div id="title-form-msg" class="container vertical-center">
+		<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+			<h1>Inspect a Website</h1>
 
-		<form action="/" method="POST">
-			<label>Please type in a URL to preview<br>
-				<input type="text" name="url" id="url-text" placeholder="http://www.theresacay.com" required>
-			</label><br>
+			<form action="/" method="POST">
+				<label>Please type in a URL to preview<br>
+					<input type="text" name="url" id="url-text" placeholder="http://www.theresacay.com" required>
+				</label><br>
 
-			<input type="submit">
-		</form>
+				<input type="submit">
+			</form>
 
-		<p>{{ msg }}<p>
+			<p>{{ msg }}<p>
+		</div>
 	</div>
 
 	<div id="main-wrapper" class="container-fluid">

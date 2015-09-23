@@ -1,4 +1,7 @@
 if (url) {
+	$('#title-form-msg').removeClass('vertical-center');
+	$('#title-form-msg').addClass('padding-bottom', '10px');
+
 	// loads url into iframe
 	var iframe = document.getElementById("iframe");
 	iframe.src = url;
