@@ -12,7 +12,7 @@ def homepage():
 	if request.method == 'POST':
 		url = request.form['url']
 
-		if url[:8] != "http://" or url[:9] != "https://":
+		if not url.startswith("http://") and not url.startswith("https://"):
 			url = "http://" + url
 			msg = ""
 
