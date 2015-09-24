@@ -33,6 +33,9 @@ $(document).ready(function(){
 				}
 
 				$('#source_code').find(className).toggleClass('highlight');
+				$('#code').animate({
+					scrollTop: $('#code').find(className+':first').position().top + $('#code').scrollTop()
+				}, 800);
 				previousClassName = className;
 
 				$(this).addClass('hover');

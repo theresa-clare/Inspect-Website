@@ -71,6 +71,7 @@ input {
 	float: right;
 	overflow: scroll;
 	height: 500px;
+	position: relative;
 }
 
 #iframe-wrapper {
