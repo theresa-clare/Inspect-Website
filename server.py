@@ -11,10 +11,10 @@ app.secret_key = "iLoveSlack"
 def homepage():
 	if request.method == 'POST':
 		url = request.form['url']
+		msg = ""
 
 		if not url.startswith("http://") and not url.startswith("https://"):
 			url = "http://" + url
-			msg = ""
 
 		is_valid, source_code = is_valid_url(url)
 
