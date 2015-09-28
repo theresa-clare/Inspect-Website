@@ -8,7 +8,7 @@ def get_tags_and_count(source_code):
 	>>> import requests
 	>>> page = requests.get("http://www.theresacay.com")
 	>>> get_tags_and_count(page.text)
-	{'p': 7, 'h2': 4, 'h3': 4, 'h1': 1, 'h4': 30, 'meta': 2, 'span': 23, 'img': 9, 'script': 4, 'li': 5, 'html': 1, 'nav': 1, <built-in function Comment>: 1, 'body': 1, 'head': 1, 'hr': 20, 'link': 5, 'br': 1, 'a': 12, 'title': 1, 'ul': 1, 'div': 35}
+	{'body': 1, 'a': 12, 'head': 1, 'h1': 1, 'span': 23, 'img': 9, 'script': 4, 'h2': 4, 'h3': 4, 'meta': 2, 'h4': 30, 'li': 5, 'hr': 20, 'ul': 1, 'html': 1, 'link': 5, 'br': 1, 'title': 1, 'div': 35, 'nav': 1, 'p': 7}
 
 	>>> get_tags_and_count("")
 
@@ -24,7 +24,8 @@ def get_tags_and_count(source_code):
 		return None
 
 	for element in tree.iter():
-		tags_and_count[element.tag] = tags_and_count.get(element.tag, 0) + 1
+		if isinstance(element, html.HtmlElement):
+			tags_and_count[element.tag] = tags_and_count.get(element.tag, 0) + 1
 
 	return tags_and_count
 
