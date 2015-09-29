@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	$('#loading').hide();
+
 	if (url) {
 		$('#title-form-msg').removeClass('vertical-center');
 		$('#title-form-msg').addClass('padding-bottom', '10px');
@@ -45,3 +47,8 @@ $(document).ready(function(){
 		$('#main-wrapper').hide();
 	}
 });
+
+$('form').submit(function() {
+	$('#title-form-msg').hide();
+	$('#loading').show();
+})

@@ -15,6 +15,10 @@ body {
     background-size: cover;
 }
 
+#loading-icon {
+	height: 50px;
+}
+
 h1 {
 	font-size: 50px;
 	margin-bottom: 20px;
@@ -42,7 +46,7 @@ input {
 	width: 370px;
 }
 
-#title-form-msg {
+#loading, #title-form-msg {
 	text-align: center;
 	color: white;
 }
