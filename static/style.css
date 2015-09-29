@@ -76,6 +76,48 @@ input {
 	height: 500px;
 }
 
+@media screen and (max-width: 1200px) {
+	#summary {
+		height: auto;
+		position: relative;
+	    width: 100%;
+	    left: 0;
+	}
+
+	ul {
+		width: auto;
+	    -webkit-column-count: 4;
+	    	-moz-column-count: 4;
+	            column-count: 4;
+	}
+
+	li {
+    	list-style-position: inside;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	ul {
+		-webkit-column-count: 3;
+	    	-moz-column-count: 3;
+	            column-count: 3;	
+	}
+}
+
+@media screen and (max-width: 600px) {
+	ul {
+		-webkit-column-count: 2;
+	    	-moz-column-count: 2;
+	            column-count: 2;	
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#main-wrapper {
+		margin: 20px;
+	}
+}
+
 #code {
 	float: right;
 	overflow: scroll;

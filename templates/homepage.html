@@ -2,13 +2,18 @@
 <html>
 <head>
 	<title>Inspect a Website</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="/static/magnifying-glass.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="/static/magnifying-glass.png" type="image/png">
 	<link rel="stylesheet" type="text/css" href="/static/style.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
 </head>
 <body>
 	<div id="loading" class="container vertical-center">
@@ -40,11 +45,11 @@
 		<div id="middle" class="container-fluid">
 
 			<div class="row">
-				<div id="summary" class="col-lg-2">
+				<div id="summary" class="container-fluid">
 					{% if tags_and_count %}
 						<ul>
 						{% for tag, count in tags_and_count.iteritems() %}
-							<li class="{{ tag }}-tag">{{ tag }}, {{ count }}</li>
+							<li class="{{ tag }}-tag">&lt;{{ tag }}&gt;, {{ count }}</li>
 						{% endfor %}
 						</ul>
 					{% endif %}
