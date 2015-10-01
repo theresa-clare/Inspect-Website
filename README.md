@@ -5,7 +5,7 @@ Are you curious about how a website is structured? This web application allows u
 ![image](/static/homepage.png)
 ![image](/static/results.png)
 
-Navigate to [Inspect a Website](http://theresaclare.pythonanywhere.com/) or run locally using the following instructions.
+Navigate to [Inspect a Website](http://www.inspectawebsite.com/) or run locally using the following instructions.
 
 ##Set up
 
@@ -29,7 +29,5 @@ pip install -r requirements.txt
 ```
 
 ---
-
-Note: If using the deployed site, please note the host only allows whitelisted sites; run locally otherwise.
 
 For questions or concerns, please email [cay.theresa@gmail.com](mailto:cay.theresa@gmail.com)
