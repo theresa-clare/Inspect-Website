@@ -1,4 +1,4 @@
-#Inspect a Website
+# Inspect a Website
 
 Are you curious about how a website is structured? This web application allows users to not only fetch and inspect a website's HTML, but also preview the overall website.
 
@@ -7,7 +7,7 @@ Are you curious about how a website is structured? This web application allows u
 
 Navigate to [Inspect a Website](http://www.inspectawebsite.com/) or run locally using the following instructions.
 
-##Set up
+## Set up
 
 Clone or fork this repo:
 
